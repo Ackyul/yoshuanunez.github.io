@@ -1,0 +1,214 @@
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN BASE
+   ========================================= */
+:root {
+    --bg-color: #121212;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --primary: #ffffff;
+    --card-bg: #1e1e1e;
+    --border: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    /* Fuente sans-serif genérica para un estilo minimalista y limpio */
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 768px; /* Un ancho más reducido hace que se vea como un blog/portafolio minimalista */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+header {
+    padding: 1.5rem 0;
+    background-color: var(--bg-color);
+}
+
+nav {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+/* =========================================
+   ESTRUCTURA DE SECCIONES
+   ========================================= */
+section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+/* =========================================
+   1. INICIO (HERO SECTION)
+   ========================================= */
+.hero {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.greeting {
+    font-size: 1rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    max-width: 600px;
+}
+
+/* =========================================
+   2. SOBRE MÍ
+   ========================================= */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    flex-shrink: 0;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   3. EXPERIENCIAS
+   ========================================= */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    border-left: 2px solid var(--border);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Punto decorativo en la línea de tiempo */
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.experience-item h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+}
+
+.experience-item .date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+/* =========================================
+   4. REDES SOCIALES
+   ========================================= */
+.socials-desc {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    padding: 0.8rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.social-card:hover {
+    background: var(--primary);
+    color: var(--card-bg);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
