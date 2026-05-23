@@ -3,104 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoshua Josafat Núñez Huaccoto | Ackyul</title>
-    <meta name="description" content="Yoshua Josafat Núñez Huaccoto (Ackyul), Estudiante de Ciencia de la Computación (CS), jugador de tier 2 de VALORANT y desarrollador web fullstack.">
+    <!-- Títulos optimizados para buscadores (SEO) para "Yoshua Josafat Núñez Huaccoto" y "Ackyul" -->
+    <title>Yoshua Josafat Núñez Huaccoto | Ackyul - Portafolio y CV</title>
+    <meta name="description" content="Página oficial y CV de Yoshua Josafat Núñez Huaccoto (Ackyul). Estudiante de Ciencia de la Computación (CS) en la UCSP, desarrollador web fullstack y jugador de VALORANT Tier 2.">
+    
+    <!-- Marcado de Datos Estructurados JSON-LD de Schema.org para asegurar indexación en Google/Bing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yoshua Josafat Núñez Huaccoto",
+      "additionalName": "Ackyul",
+      "alternateName": "Ackyul",
+      "url": "https://yoshuanunez.github.io",
+      "image": "https://yoshuanunez.github.io/foti.png",
+      "jobTitle": "Estudiante de Ciencia de la Computación & Desarrollador Web Fullstack",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Universidad Católica San Pablo"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/yoshua-nunez-ackyul/",
+        "https://github.com/Ackyul",
+        "https://x.com/Ackyul",
+        "https://www.instagram.com/yn.ackyul/",
+        "https://tracker.gg/valorant/profile/riot/Ackyul%23ACKY/overview"
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Yoshua Josafat Núñez Huaccoto / Ackyul</div>
+        <nav class="container">
+            <div class="logo">Yoshua Núñez / Ackyul</div>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#ucsp">Estudios y CS</a></li>
+                <li><a href="#experiencia">Experiencias</a></li>
+                <li><a href="#amigos">Amigos</a></li>
+                <li><a href="#redes">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <span class="greeting">¡Hola! Soy</span>
-                <h1 class="main-title">Yoshua</h1>
-                
-                <h2 class="subtitle">Tengo 17 años, soy estudiante de CS, jugador de tier 2 de VALORANT y desarrollador web fullstack.</h2>
-                
-                <p class="description">
-                    Me gusta la música, los videojuegos y enseñar.
-                    Compito en VALORANT desde 2023 y he participado en varios torneos para poder llegar a tier 2 de LATAM (VCL); bajo el nombre de "Ackyul".
-                </p>
-            </div>
-        </section>
-
-        <section class="about">
-            <div class="container">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="about-content">
-                    <img src="foti.png" alt="Mi Foto de Perfil" class="about-image">
-                    <div class="about-text">
-                        <p>Soy de Arequipa, Perú. Me encanta competir y la música.</p>
-                        <p>Mi meta es llegar a competir en el más alto nivel de VALORANT</p>
-                    </div>
+    <main class="container">
+        <!-- SOBRE MÍ (SEO Optimizado con Nombre Completo en H1) -->
+        <section id="sobre-mi" class="about-section">
+            <div class="about-hero">
+                <div class="about-text">
+                    <span class="greeting">¡Hola! Soy</span>
+                    <h1 class="main-title">Yoshua Josafat Núñez Huaccoto</h1>
+                    <h2 class="nickname-title">Alias en eSports: <span class="highlight-text">Ackyul</span></h2>
+                    <p class="subtitle">Yo, Yoshua Josafat Núñez Huaccoto (Ackyul), tengo 17 años, soy estudiante de Ciencia de la Computación (CS), jugador de tier 2 de VALORANT (main smokes) y desarrollador web fullstack.</p>
+                    <p class="description">
+                        Me gusta la música, los videojuegos y enseñar. En el ámbito de eSports, compito en VALORANT desde 2023 bajo el nombre de <strong>"Ackyul"</strong> como IGL y controlador (main smokes), buscando llegar al tier 2 de LATAM (VCL).
+                    </p>
+                </div>
+                <div class="about-image-container">
+                    <img src="foti.png" alt="Yoshua Josafat Núñez Huaccoto (Ackyul) - Foto de Perfil" class="profile-image">
                 </div>
             </div>
         </section>
 
-        <section class="experience">
-            <div class="container">
-                <h2 class="section-title">Experiencias</h2>
-                <div class="experience-list">
-                    
-                    <div class="experience-item">
-                        <h3>Estudiante de Ciencia de la Computación</h3>
-                        <span class="date">Actualidad</span>
-                        <p>Estudio en el departamento de <a href="https://ucsp.edu.pe/carrera/ciencia-de-la-computacion/" target="_blank" style="color: var(--primary); text-decoration: underline; font-weight: bold;">Ciencia de la Computación (CS)</a> de la <a href="https://ucsp.edu.pe/" target="_blank" style="color: var(--primary); text-decoration: underline; font-weight: bold;">UCSP</a> (Universidad Católica San Pablo).</p>
-                    </div>
+        <!-- UCSP Y CURSOS DE CS -->
+        <section id="ucsp" class="education-section">
+            <h2 class="section-title">Ciencia de la Computación en la UCSP</h2>
+            <p class="edu-desc">
+                Como Yoshua Josafat Núñez Huaccoto, estudio Ciencia de la Computación en la <strong>Universidad Católica San Pablo (UCSP)</strong>. La carrera sigue las directrices curriculares globales de la ACM y la IEEE, y fue creada y dirigida por mi profesor, el <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="text-link">Dr. Ernesto Cuadros Vargas</a> (quien también cuenta con su <a href="http://socios.spc.org.pe/ecuadros/" target="_blank" class="text-link">página académica personal</a>), co-autor de estos estándares internacionales (CS2013 y CC2020).
+            </p>
+            
+            <h3 class="subsection-title">Algunos cursos que llevo:</h3>
+            <ul class="courses-list">
+                <li><strong>Ciencia de la Computación I y II:</strong> Programación orientada a objetos en C++ y estructuras de datos básicas.</li>
+                <li><strong>Estructuras Discretas I y II:</strong> Lógica matemática, teoría de grafos y autómatas.</li>
+                <li><strong>Algoritmos y Estructuras de Datos:</strong> Implementación de árboles, grafos y análisis de complejidad.</li>
+                <li><strong>Desarrollo Basado en Plataformas:</strong> Creación de aplicaciones web fullstack con React y Node.js.</li>
+            </ul>
+        </section>
 
-                    <div class="experience-item">
-                        <h3>Dueño y Creador</h3>
-                        <span class="date">Actualidad</span>
-                        <p>Soy dueño de la marca <a href="https://abungasaborqueretumba.com" target="_blank" style="color: var(--primary); text-decoration: underline; font-weight: bold;">Abunga Sabor Que Retumba</a> y desarrollé toda su página web.</p>
-                    </div>
+        <!-- EXPERIENCIAS (Incluye enlace a Tracker.gg) -->
+        <section id="experiencia" class="experience-section">
+            <h2 class="section-title">Experiencias</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Dueño y Desarrollador</h3>
+                    <span class="date">Actualidad</span>
+                    <p>Yo, Yoshua Núñez, soy dueño de la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a> y diseñé y programé toda su página web.</p>
+                </div>
 
-                    <div class="experience-item">
-                        <h3>Programa Desarrollo Web Fullstack</h3>
-                        <span class="date">Actualidad</span>
-                        <p>Aprendí a crear páginas web y aplicaciones web con React, Node.js, Express y NeonDB.</p>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <h3>IGL y Controlador</h3>
-                        <span class="date">Actualidad</span>
-                        <p>Me empezaron a buscar equipos en donde empecé a llenar el rol de IGL y mi rol principal de Controlador/Smoker</p>
-                    </div>
+                <div class="experience-item">
+                    <h3>IGL y Controlador de VALORANT (Ackyul)</h3>
+                    <span class="date">Actualidad</span>
+                    <p>Bajo mi alias competitivo, Ackyul (Yoshua Núñez), compito en VALORANT en equipos del tier 2 de LATAM, donde cumplo el rol de IGL (In-Game Leader) y soy <strong>main smokes</strong> (Controlador principal), dominando la rotación de todos los agentes controladores del juego: <strong>Omen, Brimstone, Viper, Astra, Harbor, Clove y Miks</strong>. Puedes ver mis estadísticas competitivas actualizadas en mi <a href="https://tracker.gg/valorant/profile/riot/Ackyul%23ACKY/overview?platform=pc&playlist=competitive&season=ce2783e8-44fc-dd48-3da3-33b5ba6c4a22" target="_blank" class="text-link">Perfil de Tracker.gg (Ackyul#ACKY)</a>.</p>
+                </div>
 
+                <div class="experience-item">
+                    <h3>Desarrollo Web Fullstack</h3>
+                    <span class="date">2024</span>
+                    <p>Yoshua Núñez completó con éxito el aprendizaje de tecnologías frontend y backend como React, Node.js, Express y bases de datos con NeonDB (PostgreSQL).</p>
                 </div>
             </div>
         </section>
 
-        <section class="socials">
-            <div class="container">
-                <h2 class="section-title">Redes Sociales</h2>
-                <p class="socials-desc">Puedes encontrarme o contactarme a través de mis redes:</p>
-                <div class="social-links">
-                                      
-                    <a href="https://www.instagram.com/yn.ackyul/" target="_blank" class="social-card">
-                        Instagram
-                    </a>
-                    
-                    <a href="https://x.com/Ackyul" target="_blank" class="social-card">
-                        X
-                    </a>
-                    
-                    <a href="https://github.com/Ackyul" target="_blank" class="social-card">
-                        Github
-                    </a>
+        <!-- ENLACES DE AMIGOS -->
+        <section id="amigos" class="friends-section">
+            <h2 class="section-title">Páginas de mis Amigos</h2>
+            <p class="friends-desc">Aquí puedes visitar los sitios web de los amigos y compañeros de Yoshua Núñez (Ackyul):</p>
+            <div class="friends-links">
+                <a href="https://github.com/Ackyul" target="_blank" class="friend-link-card">Portafolio de Amigo 1 &rarr;</a>
+                <a href="https://github.com/Ackyul" target="_blank" class="friend-link-card">Portafolio de Amigo 2 &rarr;</a>
+                <a href="mailto:yoshua.nunez.h@gmail.com" class="friend-link-card add-friend">¡Agrega tu web aquí! +</a>
+            </div>
+        </section>
 
-                </div>
+        <!-- REDES SOCIALES Y CONTACTO (Con botón de Tracker.gg) -->
+        <section id="redes" class="socials-section">
+            <h2 class="section-title">Contacto y Redes</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yoshua-nunez-ackyul/" target="_blank" class="social-btn linkedin">LinkedIn</a>
+                <a href="https://tracker.gg/valorant/profile/riot/Ackyul%23ACKY/overview?platform=pc&playlist=competitive&season=ce2783e8-44fc-dd48-3da3-33b5ba6c4a22" target="_blank" class="social-btn tracker">Valorant Tracker</a>
+                <a href="https://github.com/Ackyul" target="_blank" class="social-btn github">GitHub</a>
+                <a href="https://x.com/Ackyul" target="_blank" class="social-btn twitter">X (Twitter)</a>
+                <a href="https://www.instagram.com/yn.ackyul/" target="_blank" class="social-btn instagram">Instagram</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Yoshua Josafat Núñez Huaccoto. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Yoshua Josafat Núñez Huaccoto (Ackyul). Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

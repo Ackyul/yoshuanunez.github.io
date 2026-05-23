@@ -1,13 +1,13 @@
 /* =========================================
-   VARIABLES Y CONFIGURACIÓN BASE
+   VARIABLES & BASE CONFIG
    ========================================= */
 :root {
     --bg-color: #121212;
-    --text-main: #f9fafb;
+    --text-main: #f3f4f6;
     --text-muted: #9ca3af;
-    --primary: #ffffff;
-    --card-bg: #1e1e1e;
-    --border: #333333;
+    --primary: #818cf8; /* Indigo claro */
+    --border: #2d2d30;
+    --card-bg: #1e1e24;
 }
 
 * {
@@ -19,116 +19,180 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    /* Fuente sans-serif genérica para un estilo minimalista y limpio */
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 768px; /* Un ancho más reducido hace que se vea como un blog/portafolio minimalista */
+    max-width: 768px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 /* =========================================
-   BARRA DE NAVEGACIÓN
+   HEADER & NAVIGATION
    ========================================= */
 header {
-    padding: 1.5rem 0;
-    background-color: var(--bg-color);
+    padding: 2rem 0 1rem 0;
 }
 
 nav {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-main);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
     color: var(--primary);
 }
 
 /* =========================================
-   ESTRUCTURA DE SECCIONES
+   SECTIONS
    ========================================= */
 section {
     padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+    border-bottom: none;
 }
 
 .section-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-    display: inline-block;
-    padding-bottom: 0.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.subsection-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    color: var(--text-main);
 }
 
 /* =========================================
-   1. INICIO (HERO SECTION)
+   1. SOBRE MÍ (HERO)
    ========================================= */
-.hero {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
 }
 
 .greeting {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .main-title {
     font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
+    font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 0.25rem;
 }
 
-.subtitle {
-    font-size: 1.25rem;
+.nickname-title {
+    font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
-}
-
-.description {
-    font-size: 1.05rem;
-    color: var(--text-main);
-    max-width: 600px;
-}
-
-/* =========================================
-   2. SOBRE MÍ
-   ========================================= */
-.about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.about-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--border);
-    flex-shrink: 0;
-}
-
-.about-text p {
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
-    .about-content {
-        flex-direction: row;
-        align-items: flex-start;
+.highlight-text {
+    color: #ff4655;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.about-image-container {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        flex-direction: column-reverse;
+        text-align: center;
     }
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* =========================================
+   2. ESTUDIOS Y CURSOS UCSP
+   ========================================= */
+.edu-desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.courses-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.courses-list li {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.courses-list li strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.25rem;
 }
 
 /* =========================================
@@ -142,64 +206,114 @@ section {
 
 .experience-item {
     border-left: 2px solid var(--border);
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
     position: relative;
 }
 
-/* Punto decorativo en la línea de tiempo */
 .experience-item::before {
     content: '';
     position: absolute;
-    left: -6px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
+    left: -5px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--primary);
 }
 
 .experience-item h3 {
     font-size: 1.15rem;
-    color: var(--primary);
-    margin-bottom: 0.2rem;
+    font-weight: 600;
+    color: var(--text-main);
 }
 
 .experience-item .date {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-link {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.text-link:hover {
+    color: var(--text-main);
 }
 
 /* =========================================
-   4. REDES SOCIALES
+   4. PÁGINAS DE AMIGOS
    ========================================= */
-.socials-desc {
-    margin-bottom: 1.5rem;
+.friends-desc {
+    margin-bottom: 1.25rem;
     color: var(--text-muted);
 }
 
+.friends-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.friend-link-card {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.friend-link-card:hover {
+    background-color: var(--primary);
+    color: #121212;
+    border-color: var(--primary);
+}
+
+.add-friend {
+    border-style: dashed;
+    color: var(--text-muted);
+}
+
+.add-friend:hover {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* =========================================
+   5. REDES Y CONTACTO
+   ========================================= */
 .social-links {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.social-card {
-    padding: 0.8rem 1.5rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+.social-btn {
+    padding: 0.75rem 1.5rem;
     border-radius: 8px;
     text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: opacity 0.2s ease;
 }
 
-.social-card:hover {
-    background: var(--primary);
-    color: var(--card-bg);
+.social-btn:hover {
+    opacity: 0.9;
 }
+
+.linkedin { background-color: #0077b5; }
+.tracker { background-color: #ff4655; }
+.github { background-color: #333333; }
+.twitter { background-color: #1da1f2; }
+.instagram { background-color: #e1306c; }
 
 /* =========================================
    FOOTER
@@ -209,6 +323,5 @@ footer {
     text-align: center;
     border-top: 1px solid var(--border);
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-top: 2rem;
+    font-size: 0.85rem;
 }
