@@ -316,6 +316,179 @@ section:last-of-type {
 .instagram { background-color: #e1306c; }
 
 /* =========================================
+   6. AOURUM SHOWCASE
+   ========================================= */
+.aourum-section {
+    padding: 3rem 0;
+}
+
+.aourum-desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.aourum-desc strong {
+    color: var(--primary);
+}
+
+/* Browser Mockup Tabs */
+.browser-tabs {
+    display: flex;
+    background-color: #0d0d0f;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.browser-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.5rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.browser-tab:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--text-main);
+}
+
+.browser-tab.active {
+    background-color: #16161a;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    border-bottom: 1px solid #16161a;
+    margin-bottom: -1px;
+}
+
+/* Browser Mockup */
+.browser-mockup {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.browser-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #16161a;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+}
+
+.browser-buttons {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.browser-buttons .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.browser-buttons .red { background-color: #ff5f56; }
+.browser-buttons .yellow { background-color: #ffbd2e; }
+.browser-buttons .green { background-color: #27c93f; }
+
+.browser-address {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.25rem 0.75rem;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.lock-icon {
+    font-size: 0.75rem;
+    color: #27c93f;
+}
+
+.browser-address input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    pointer-events: none;
+}
+
+.browser-actions {
+    display: flex;
+    align-items: center;
+}
+
+.open-tab-btn {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.open-tab-btn:hover {
+    color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.browser-body {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.browser-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .browser-body {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .browser-body {
+        height: 300px;
+    }
+    .browser-address {
+        display: none;
+    }
+    .browser-header {
+        justify-content: space-between;
+    }
+}
+
+/* =========================================
    FOOTER
    ========================================= */
 footer {

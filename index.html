@@ -39,6 +39,7 @@
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#ucsp">Estudios y CS</a></li>
                 <li><a href="#experiencia">Experiencias</a></li>
+                <li><a href="#aourum">AOURUM & ACON</a></li>
                 <li><a href="#amigos">Amigos</a></li>
                 <li><a href="#redes">Contacto</a></li>
             </ul>
@@ -52,7 +53,7 @@
                     <span class="greeting">¡Hola! Soy</span>
                     <h1 class="main-title">Yoshua Josafat Núñez Huaccoto</h1>
                     <h2 class="nickname-title">Alias en eSports: <span class="highlight-text">Ackyul</span></h2>
-                    <p class="subtitle">Yo, Yoshua Josafat Núñez Huaccoto (Ackyul), tengo 17 años, soy estudiante de Ciencia de la Computación (CS), jugador de tier 2 de VALORANT (main smokes) y desarrollador web fullstack.</p>
+                    <p class="subtitle">Yo, Yoshua Josafat Núñez Huaccoto (Ackyul), tengo 17 años, soy estudiante de Ciencia de la Computación (CS), jugador de tier 2 de VALORANT (main smokes), desarrollador de <a href="https://aourum.vercel.app" target="_blank" class="text-link">AOURUM</a> y <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a>, y desarrollador web fullstack.</p>
                     <p class="description">
                         Me gusta la música, los videojuegos y enseñar. En el ámbito de eSports, compito en VALORANT desde 2023 bajo el nombre de <strong>"Ackyul"</strong> como IGL y controlador (main smokes), buscando llegar al tier 2 de LATAM (VCL).
                     </p>
@@ -82,6 +83,12 @@
             <h2 class="section-title">Experiencias</h2>
             <div class="experience-list">
                 <div class="experience-item">
+                    <h3>Desarrollador de AOURUM & ACON</h3>
+                    <span class="date">Actualidad</span>
+                    <p>Como desarrollador de la plataforma <a href="https://aourum.vercel.app" target="_blank" class="text-link">AOURUM</a> y su sistema complementario <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> (proyectos que van de la mano), participo activamente en el diseño, desarrollo e implementación de nuevas funcionalidades, optimización de interfaces de usuario y lógica del sistema para ofrecer una experiencia fluida.</p>
+                </div>
+
+                <div class="experience-item">
                     <h3>Dueño y Desarrollador</h3>
                     <span class="date">Actualidad</span>
                     <p>Yo, Yoshua Núñez, soy dueño de la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a> y diseñé y programé toda su página web.</p>
@@ -97,6 +104,43 @@
                     <h3>Desarrollo Web Fullstack</h3>
                     <span class="date">2024</span>
                     <p>Yoshua Núñez completó con éxito el aprendizaje de tecnologías frontend y backend como React, Node.js, Express y bases de datos con NeonDB (PostgreSQL).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aourum" class="aourum-section">
+            <h2 class="section-title">Proyectos Destacados: AOURUM & ACON</h2>
+            <p class="aourum-desc">
+                Desarrollo activamente <a href="https://aourum.vercel.app" target="_blank" class="text-link">AOURUM</a> y su plataforma complementaria <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a>, dos proyectos diseñados para trabajar de la mano. Explora e interactúa con ambos sitios directamente desde este navegador interactivo:
+            </p>
+            
+            <div class="browser-mockup">
+                <div class="browser-tabs">
+                    <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.vercel.app')">AOURUM</button>
+                    <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">ACON</button>
+                </div>
+                <div class="browser-header">
+                    <div class="browser-buttons">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="browser-address">
+                        <span class="lock-icon">🔒</span>
+                        <input type="text" id="browser-url" value="https://aourum.vercel.app" readonly>
+                    </div>
+                    <div class="browser-actions">
+                        <a href="https://aourum.vercel.app" id="browser-external-link" target="_blank" title="Abrir en pestaña nueva" class="open-tab-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="browser-body">
+                    <iframe id="browser-iframe" src="https://aourum.vercel.app" title="Visualización del Proyecto" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -132,5 +176,24 @@
             <p>&copy; 2026 Yoshua Josafat Núñez Huaccoto (Ackyul). Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        function switchTab(tabElement, url) {
+            // Quitar clase activa a todas las pestañas
+            const tabs = document.querySelectorAll('.browser-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Añadir clase activa a la pestaña clickeada
+            tabElement.classList.add('active');
+            
+            // Actualizar valor de la barra de URL
+            document.getElementById('browser-url').value = url;
+            
+            // Cambiar fuente del iframe
+            document.getElementById('browser-iframe').src = url;
+            
+            // Actualizar enlace externo
+            document.getElementById('browser-external-link').href = url;
+        }
+    </script>
 </body>
 </html>
