@@ -48,6 +48,19 @@ nav {
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+
+.alias-badge {
+    background: rgba(129, 140, 248, 0.15);
+    color: var(--primary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    border: 1px solid rgba(129, 140, 248, 0.3);
 }
 
 .nav-links {
@@ -114,32 +127,37 @@ section:last-of-type {
 }
 
 .main-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.nickname-title {
+.role-subtitle {
     font-size: 1.1rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    color: var(--primary);
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
+.role-subtitle .separator {
+    color: var(--text-muted);
+    margin: 0 0.4rem;
+}
+
 .highlight-text {
-    color: #ff4655;
+    color: var(--primary);
     font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
     margin-bottom: 1rem;
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-main);
 }
 
@@ -153,6 +171,12 @@ section:last-of-type {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--border);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-image:hover {
+    border-color: var(--primary);
+    transform: scale(1.03);
 }
 
 @media (max-width: 600px) {
@@ -167,7 +191,102 @@ section:last-of-type {
 }
 
 /* =========================================
-   2. ESTUDIOS Y CURSOS UCSP
+   2. PROYECTOS DESTACADOS
+   ========================================= */
+.projects-intro {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25 ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(129, 140, 248, 0.15);
+}
+
+.project-card-header {
+    margin-bottom: 0.75rem;
+}
+
+.project-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.project-description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.project-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.project-link:hover {
+    color: #ffffff;
+}
+
+.mockup-header-text {
+    margin-top: 1rem;
+}
+
+/* =========================================
+   3. ESTUDIOS Y CURSOS UCSP
    ========================================= */
 .edu-desc {
     font-size: 1rem;
@@ -196,7 +315,7 @@ section:last-of-type {
 }
 
 /* =========================================
-   3. EXPERIENCIAS
+   4. EXPERIENCIAS
    ========================================= */
 .experience-list {
     display: flex;
@@ -244,7 +363,7 @@ section:last-of-type {
 }
 
 /* =========================================
-   4. PÁGINAS DE AMIGOS
+   5. PÁGINAS DE AMIGOS
    ========================================= */
 .friends-desc {
     margin-bottom: 1.25rem;
@@ -287,7 +406,7 @@ section:last-of-type {
 }
 
 /* =========================================
-   5. REDES Y CONTACTO
+   6. REDES Y CONTACTO
    ========================================= */
 .social-links {
     display: flex;
@@ -302,11 +421,12 @@ section:last-of-type {
     font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .social-btn:hover {
     opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .linkedin { background-color: #0077b5; }
@@ -314,6 +434,8 @@ section:last-of-type {
 .github { background-color: #333333; }
 .twitter { background-color: #1da1f2; }
 .instagram { background-color: #e1306c; }
+.aourum-btn { background-color: #d97706; }
+.abunga-btn { background-color: #059669; }
 
 /* =========================================
    6. AOURUM SHOWCASE
