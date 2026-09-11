@@ -33,14 +33,22 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Animated Mesh Glows -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+
     <header class="header">
         <nav class="container nav-container">
             <div class="logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                </div>
                 <span class="logo-name">Yoshua Núñez</span>
                 <span class="alias-badge">Ackyul</span>
             </div>
@@ -56,12 +64,13 @@
     </header>
 
     <main class="main-content">
+        <!-- HERO SECTION -->
         <section id="sobre-mi" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-text">
                     <div class="greeting-badge">
                         <span class="pulse-dot"></span>
-                        ¡Hola! Soy
+                        <span>¡Hola! Bienvenid@ a mi sitio</span>
                     </div>
                     <h1 class="main-title">Yoshua Josafat <br><span class="gradient-text">Núñez Huaccoto</span></h1>
                     <h2 class="role-subtitle">
@@ -70,16 +79,33 @@
                         <span>Estudiante de CS en UCSP</span>
                     </h2>
                     <p class="hero-summary">
-                        Creador y desarrollador de <a href="https://aourum.com" target="_blank" class="text-link">AOURUM</a>, <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.
+                        Creador y desarrollador principal de <a href="https://aourum.com" target="_blank" class="text-link">AOURUM</a>, <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.
                     </p>
                     <p class="description">
-                        Apasionado por la tecnología, el diseño web moderno y la arquitectura de software. Actualmente me formo en Ciencia de la Computación en la Universidad Católica San Pablo (UCSP). En el ámbito competitivo de eSports, fui <strong>ex jugador profesional en OXEN</strong> (VALORANT).
+                        Apasionado por la tecnología, la arquitectura de software y el diseño interactivo de alta performance. Formándome continuamente en Ciencia de la Computación en la Universidad Católica San Pablo (UCSP). En mi trayectoria competitiva, fui <strong>ex jugador profesional de eSports en OXEN</strong> (VALORANT).
                     </p>
+                    
+                    <!-- Quick Tech Stack Chips -->
+                    <div class="tech-pills-row">
+                        <span class="tech-pill"><span class="pill-dot react"></span> Fullstack Web</span>
+                        <span class="tech-pill"><span class="pill-dot node"></span> Node.js & React</span>
+                        <span class="tech-pill"><span class="pill-dot cpp"></span> C++ & Algorithms</span>
+                        <span class="tech-pill"><span class="pill-dot db"></span> NeonDB (PostgreSQL)</span>
+                        <span class="tech-pill"><span class="pill-dot oxen"></span> Ex-OXEN Pro</span>
+                    </div>
+
                     <div class="hero-actions">
-                        <a href="#proyectos" class="btn primary-btn">Ver Mis Proyectos</a>
-                        <a href="#redes" class="btn secondary-btn">Contactar</a>
+                        <a href="#proyectos" class="btn primary-btn">
+                            <span>Explorar Proyectos</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#redes" class="btn secondary-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>Contactar</span>
+                        </a>
                     </div>
                 </div>
+
                 <div class="hero-image-wrapper">
                     <div class="profile-card">
                         <div class="profile-glow"></div>
@@ -87,91 +113,165 @@
                         <div class="profile-badge">
                             <span class="badge-icon">⚡</span> Ackyul
                         </div>
+
+                        <!-- Floating Graphic Badges around Profile Card -->
+                        <div class="floating-badge badge-top">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <span>Web Dev</span>
+                        </div>
+                        <div class="floating-badge badge-bottom">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            <span>UCSP CS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="container">
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Proyectos Web Activos</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">UCSP</div>
+                        <div class="stat-label">Ciencia de la Computación</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">OXEN</div>
+                        <div class="stat-label">Ex Jugador Pro eSports</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Código & Diseño Propio</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
         <section id="proyectos" class="projects-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Portafolio</span>
+                <div class="section-header center">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Portafolio
+                    </span>
                     <h2 class="section-title">Proyectos Destacados</h2>
                     <p class="section-subtitle">
-                        Desarrollos web principales, arquitecturas frontend/backend y marcas creadas e implementadas:
+                        Desarrollos web principales, arquitecturas de software y marcas creadas e implementadas:
                     </p>
                 </div>
 
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-card-header">
+                    <!-- Project 1: AOURUM -->
+                    <div class="project-card card-aourum">
+                        <div class="project-card-banner banner-aourum">
+                            <div class="banner-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 29 14.5 14.5 0 0 0 0-29M2 12h20"/></svg>
+                            </div>
                             <span class="project-badge">Plataforma Web</span>
+                        </div>
+                        <div class="project-card-body">
                             <h3 class="project-title">AOURUM</h3>
+                            <p class="project-description">
+                                Plataforma web principal diseñada y desarrollada enfocada en la experiencia de usuario, optimización de interfaz moderna y arquitecturas robustas.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><span class="tag-dot amber"></span> Web App</span>
+                                <span class="tag"><span class="tag-dot indigo"></span> Fullstack</span>
+                                <span class="tag"><span class="tag-dot cyan"></span> UI/UX</span>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            Plataforma web principal diseñada y desarrollada enfocada en una excelente experiencia de usuario, optimización de interfaz y arquitecturas modernas.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Web App</span>
-                            <span class="tag">Fullstack</span>
-                            <span class="tag">UI/UX</span>
+                        <div class="project-card-footer">
+                            <a href="https://aourum.com" target="_blank" class="project-link aourum-link">
+                                <span>Visitar aourum.com</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
                         </div>
-                        <a href="https://aourum.com" target="_blank" class="project-link">
-                            Visitar aourum.com 
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-card-header">
+                    <!-- Project 2: ACON -->
+                    <div class="project-card card-acon">
+                        <div class="project-card-banner banner-acon">
+                            <div class="banner-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
                             <span class="project-badge">Sistema Web</span>
+                        </div>
+                        <div class="project-card-body">
                             <h3 class="project-title">ACON</h3>
+                            <p class="project-description">
+                                Sistema complementario integrado que trabaja de la mano con AOURUM, aportando lógica avanzada, gestión de datos y herramientas optimizadas.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><span class="tag-dot cyan"></span> Frontend</span>
+                                <span class="tag"><span class="tag-dot purple"></span> Backend</span>
+                                <span class="tag"><span class="tag-dot green"></span> Integration</span>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            Sistema complementario que trabaja en conjunto con AOURUM, aportando funcionalidades avanzadas y gestión integrada.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Frontend</span>
-                            <span class="tag">Backend</span>
-                            <span class="tag">Integration</span>
+                        <div class="project-card-footer">
+                            <a href="https://acon-rho.vercel.app" target="_blank" class="project-link acon-link">
+                                <span>Visitar ACON</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
                         </div>
-                        <a href="https://acon-rho.vercel.app" target="_blank" class="project-link">
-                            Visitar ACON 
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-card-header">
+                    <!-- Project 3: Abunga Sabor Que Retumba -->
+                    <div class="project-card card-abunga">
+                        <div class="project-card-banner banner-abunga">
+                            <div class="banner-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
                             <span class="project-badge">Marca & E-Commerce</span>
+                        </div>
+                        <div class="project-card-body">
                             <h3 class="project-title">Abunga Sabor Que Retumba</h3>
+                            <p class="project-description">
+                                Marca propia y sitio web oficial de Abunga Sabor Que Retumba, ideada, diseñada y maquetada completamente desde cero.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag"><span class="tag-dot emerald"></span> Branding</span>
+                                <span class="tag"><span class="tag-dot amber"></span> Web Design</span>
+                                <span class="tag"><span class="tag-dot rose"></span> E-Commerce</span>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            Marca propia y plataforma web oficial de Abunga Sabor Que Retumba, diseñada, maquetada y programada desde cero.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Web Design</span>
-                            <span class="tag">E-Commerce</span>
+                        <div class="project-card-footer">
+                            <a href="https://abungasaborqueretumba.com" target="_blank" class="project-link abunga-link">
+                                <span>Visitar abungasaborqueretumba.com</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
                         </div>
-                        <a href="https://abungasaborqueretumba.com" target="_blank" class="project-link">
-                            Visitar abungasaborqueretumba.com 
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
                     </div>
                 </div>
 
+                <!-- Live Browser Mockup -->
                 <div class="mockup-container">
                     <div class="mockup-header-text">
-                        <h3 class="subsection-title">Explora los Proyectos en Vivo</h3>
-                        <p class="aourum-desc">Interactúa directamente entre mis proyectos desde este navegador integrado:</p>
+                        <div class="mockup-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                            <span>Demostración Interactiva</span>
+                        </div>
+                        <h3 class="subsection-title">Navegador Integrado en Vivo</h3>
+                        <p class="aourum-desc">Interactúa directamente con mis proyectos desde este navegador web simulado:</p>
                     </div>
                     
                     <div class="browser-mockup">
                         <div class="browser-tabs">
-                            <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com')">AOURUM</button>
-                            <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">ACON</button>
-                            <button class="browser-tab" onclick="switchTab(this, 'https://abungasaborqueretumba.com')">Abunga</button>
+                            <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com')">
+                                <span class="tab-icon gold">●</span> AOURUM
+                            </button>
+                            <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">
+                                <span class="tab-icon cyan">●</span> ACON
+                            </button>
+                            <button class="browser-tab" onclick="switchTab(this, 'https://abungasaborqueretumba.com')">
+                                <span class="tab-icon emerald">●</span> Abunga
+                            </button>
                         </div>
                         <div class="browser-header">
                             <div class="browser-buttons">
@@ -201,176 +301,275 @@
             </div>
         </section>
 
-        <!-- Secciones de Educación y Experiencia en Cuadrícula Panorámica de 2 Columnas -->
+        <!-- EDUCATION & EXPERIENCE (2-COLUMN GRID) -->
         <section class="split-section">
             <div class="container split-grid">
+                <!-- UCSP Education Card -->
                 <div id="ucsp" class="education-card">
                     <div class="card-header">
-                        <span class="section-tag">Formación</span>
-                        <h2 class="section-title">Ciencia de la Computación - UCSP</h2>
+                        <div class="header-icon-box ed-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                        <div>
+                            <span class="section-tag">Formación Académica</span>
+                            <h2 class="section-title">Ciencia de la Computación - UCSP</h2>
+                        </div>
                     </div>
+                    
                     <p class="edu-desc">
-                        Estudio Ciencia de la Computación en la <strong>Universidad Católica San Pablo (UCSP)</strong>. La carrera sigue los estándares globales de la ACM y la IEEE, creada y dirigida por el <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="text-link">Dr. Ernesto Cuadros Vargas</a> (<a href="http://socios.spc.org.pe/ecuadros/" target="_blank" class="text-link">página académica</a>), co-autor de CS2013 y CC2020.
+                        Estudio Ciencia de la Computación en la <strong>Universidad Católica San Pablo (UCSP)</strong>. La carrera sigue las directrices globales de la ACM y la IEEE, creada y dirigida por el <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="text-link">Dr. Ernesto Cuadros Vargas</a> (<a href="http://socios.spc.org.pe/ecuadros/" target="_blank" class="text-link">página personal</a>), co-autor de los estándares CS2013 y CC2020.
                     </p>
                     
-                    <h3 class="subsection-title">Cursos Principales:</h3>
+                    <h3 class="subsection-title">Cursos Destacados:</h3>
                     <ul class="courses-list">
                         <li>
-                            <div class="course-header">
-                                <strong>Ciencia de la Computación I y II</strong>
-                                <span class="course-tag">C++ & POO</span>
+                            <div class="course-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                             </div>
-                            <p>Programación orientada a objetos en C++ y estructuras de datos.</p>
+                            <div class="course-details">
+                                <div class="course-header">
+                                    <strong>Ciencia de la Computación I y II</strong>
+                                    <span class="course-tag">C++ & POO</span>
+                                </div>
+                                <p>Programación orientada a objetos en C++ y estructuras de datos fundamentales.</p>
+                            </div>
                         </li>
                         <li>
-                            <div class="course-header">
-                                <strong>Estructuras Discretas I y II</strong>
-                                <span class="course-tag">Teoría & Grafos</span>
+                            <div class="course-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                             </div>
-                            <p>Lógica matemática, teoría de grafos, relaciones y autómatas.</p>
+                            <div class="course-details">
+                                <div class="course-header">
+                                    <strong>Estructuras Discretas I y II</strong>
+                                    <span class="course-tag">Lógica & Grafos</span>
+                                </div>
+                                <p>Lógica matemática, teoría de grafos, relaciones y autómatas finitos.</p>
+                            </div>
                         </li>
                         <li>
-                            <div class="course-header">
-                                <strong>Algoritmos y Estructuras de Datos</strong>
-                                <span class="course-tag">Algoritmos</span>
+                            <div class="course-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                             </div>
-                            <p>Implementación de árboles, grafos y análisis de complejidad.</p>
+                            <div class="course-details">
+                                <div class="course-header">
+                                    <strong>Algoritmos y Estructuras de Datos</strong>
+                                    <span class="course-tag">Algoritmos</span>
+                                </div>
+                                <p>Implementación de árboles, grafos avanzados y análisis de complejidad Big-O.</p>
+                            </div>
                         </li>
                         <li>
-                            <div class="course-header">
-                                <strong>Desarrollo Basado en Plataformas</strong>
-                                <span class="course-tag">Fullstack</span>
+                            <div class="course-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </div>
-                            <p>Creación de aplicaciones web fullstack con React y Node.js.</p>
+                            <div class="course-details">
+                                <div class="course-header">
+                                    <strong>Desarrollo Basado en Plataformas</strong>
+                                    <span class="course-tag">Fullstack</span>
+                                </div>
+                                <p>Creación de aplicaciones web fullstack con React, Node.js y bases de datos.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Experience Card -->
                 <div id="experiencia" class="experience-card">
                     <div class="card-header">
-                        <span class="section-tag">Trayectoria</span>
-                        <h2 class="section-title">Experiencia</h2>
+                        <div class="header-icon-box exp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <div>
+                            <span class="section-tag">Trayectoria</span>
+                            <h2 class="section-title">Experiencia</h2>
+                        </div>
                     </div>
+                    
                     <div class="experience-list">
                         <div class="experience-item">
-                            <div class="exp-badge">Actualidad</div>
-                            <h3>Desarrollador Web Fullstack & Creador</h3>
-                            <p>Diseño y desarrollo web de aplicaciones interactivas como <a href="https://aourum.com" target="_blank" class="text-link">aourum.com</a>, el sistema <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la plataforma para la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.</p>
+                            <div class="exp-icon-bullet">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-badge">Actualidad</div>
+                                <h3>Desarrollador Web Fullstack & Creador</h3>
+                                <p>Diseño y desarrollo web fullstack de plataformas como <a href="https://aourum.com" target="_blank" class="text-link">aourum.com</a>, el sistema <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y el sitio web de la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.</p>
+                            </div>
                         </div>
 
                         <div class="experience-item">
-                            <div class="exp-badge">Actualidad</div>
-                            <h3>Estudiante de Ciencia de la Computación (UCSP)</h3>
-                            <p>Formación académica avanzada en ciencias de la computación, estructuras de datos, algoritmos complejos y desarrollo de software estructurado.</p>
+                            <div class="exp-icon-bullet">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-badge">Actualidad</div>
+                                <h3>Estudiante de Ciencia de la Computación (UCSP)</h3>
+                                <p>Formación sólida en computación teórica y práctica, lógica, optimización de algoritmos y arquitectura de sistemas.</p>
+                            </div>
                         </div>
 
                         <div class="experience-item">
-                            <div class="exp-badge history">2023 - 2024</div>
-                            <h3>Ex Jugador Profesional de eSports (OXEN)</h3>
-                            <p>Ex jugador profesional de VALORANT en la organización <strong>OXEN</strong>. Desempeñé el rol de IGL (In-Game Leader) y Controlador principal (Main Smokes), dirigiendo estrategias de equipo en competencia.</p>
+                            <div class="exp-icon-bullet history-bullet">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div class="exp-content">
+                                <div class="exp-badge history">2023 - 2024</div>
+                                <h3>Ex Jugador Profesional de eSports (OXEN)</h3>
+                                <p>Ex jugador profesional de VALORANT en la organización <strong>OXEN</strong>. Desempeñé el rol de IGL (In-Game Leader) y Controlador principal (Main Smokes), dirigiendo estrategias de equipo en competencia.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- FRIENDS SECTION -->
         <section id="amigos" class="friends-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Comunidad</span>
+                <div class="section-header center">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        Comunidad
+                    </span>
                     <h2 class="section-title">Páginas de mis Amigos</h2>
                     <p class="section-subtitle">Conecta con los sitios web y portafolios de mis compañeros de estudio:</p>
                 </div>
+                
                 <div class="friends-grid">
                     <a href="https://jairchirinos-ucsp.github.io" target="_blank" class="friend-card">
                         <div class="friend-avatar">JC</div>
                         <div class="friend-info">
                             <span class="friend-name">Jair Chirinos</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+                    
                     <a href="https://yulvillena-source.github.io/Yul_Villena/" target="_blank" class="friend-card">
                         <div class="friend-avatar">YV</div>
                         <div class="friend-info">
                             <span class="friend-name">Yul Villena</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://jsalavaldez.github.io" target="_blank" class="friend-card">
                         <div class="friend-avatar">JM</div>
                         <div class="friend-info">
                             <span class="friend-name">Jose Miguel</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://benjaminamv11.github.io/benjaminanv11.github.io/" target="_blank" class="friend-card">
                         <div class="friend-avatar">BM</div>
                         <div class="friend-info">
                             <span class="friend-name">Benjamin Mamani</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://bryanalencastre.github.io/Bryan-Alencastre/" target="_blank" class="friend-card">
                         <div class="friend-avatar">BA</div>
                         <div class="friend-info">
                             <span class="friend-name">Bryan Alencastre</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://angelfabianramosmunoz.github.io" target="_blank" class="friend-card">
                         <div class="friend-avatar">AR</div>
                         <div class="friend-info">
                             <span class="friend-name">Angel Ramos</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/" target="_blank" class="friend-card">
                         <div class="friend-avatar">DA</div>
                         <div class="friend-info">
                             <span class="friend-name">Diego Aragón</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
+
                     <a href="https://kings-67.github.io/Learnsy/" target="_blank" class="friend-card">
                         <div class="friend-avatar">NO</div>
                         <div class="friend-info">
                             <span class="friend-name">Nicolas Olarte</span>
-                            <span class="friend-link-icon">&rarr;</span>
+                            <span class="friend-link-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </span>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- SOCIALS & CONTACT SECTION -->
         <section id="redes" class="socials-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Conectemos</span>
-                    <h2 class="section-title">Contacto y Enlaces</h2>
+                <div class="section-header center">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Conectemos
+                    </span>
+                    <h2 class="section-title">Contacto y Enlaces Oficiales</h2>
                 </div>
+
                 <div class="social-grid">
                     <a href="https://www.linkedin.com/in/yoshua-nunez-ackyul/" target="_blank" class="social-card linkedin">
-                        <div class="social-icon">in</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </div>
                         <div class="social-title">LinkedIn</div>
                     </a>
+
                     <a href="https://github.com/Ackyul" target="_blank" class="social-card github">
-                        <div class="social-icon">GH</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                        </div>
                         <div class="social-title">GitHub</div>
                     </a>
+
                     <a href="https://aourum.com" target="_blank" class="social-card aourum">
-                        <div class="social-icon">AO</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 29 14.5 14.5 0 0 0 0-29M2 12h20"/></svg>
+                        </div>
                         <div class="social-title">aourum.com</div>
                     </a>
+
                     <a href="https://abungasaborqueretumba.com" target="_blank" class="social-card abunga">
-                        <div class="social-icon">AB</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
                         <div class="social-title">Abunga</div>
                     </a>
+
                     <a href="https://x.com/Ackyul" target="_blank" class="social-card twitter">
-                        <div class="social-icon">X</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </div>
                         <div class="social-title">X (Twitter)</div>
                     </a>
+
                     <a href="https://www.instagram.com/yn.ackyul/" target="_blank" class="social-card instagram">
-                        <div class="social-icon">IG</div>
+                        <div class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
                         <div class="social-title">Instagram</div>
                     </a>
                 </div>
@@ -397,5 +596,6 @@
     </script>
 </body>
 </html>
+
 
 
