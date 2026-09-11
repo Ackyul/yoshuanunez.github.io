@@ -284,12 +284,22 @@
                                 <input type="text" id="browser-url" value="https://aourum.com" readonly>
                             </div>
                             <div class="browser-actions">
+                                <div class="view-mode-selector">
+                                    <button class="view-btn active" id="btn-view-desktop" onclick="setDeviceView('desktop')" title="Vista Escritorio Completa">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                        <span>Escritorio</span>
+                                    </button>
+                                    <button class="view-btn" id="btn-view-mobile" onclick="setDeviceView('mobile')" title="Vista Móvil Enmarcada">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                        <span>Móvil</span>
+                                    </button>
+                                </div>
                                 <a href="https://aourum.com" id="browser-external-link" target="_blank" title="Abrir en pestaña nueva" class="open-tab-btn">
                                     <span>Abrir Sitio ↗</span>
                                 </a>
                             </div>
                         </div>
-                        <div class="browser-body">
+                        <div class="browser-body" id="browser-body-container">
                             <iframe id="browser-iframe" src="https://aourum.com" title="Visualización del Proyecto" loading="lazy"></iframe>
                         </div>
                     </div>
@@ -588,6 +598,22 @@
             document.getElementById('browser-url').value = url;
             document.getElementById('browser-iframe').src = url;
             document.getElementById('browser-external-link').href = url;
+        }
+
+        function setDeviceView(mode) {
+            const container = document.getElementById('browser-body-container');
+            const btnDesktop = document.getElementById('btn-view-desktop');
+            const btnMobile = document.getElementById('btn-view-mobile');
+            
+            if (mode === 'mobile') {
+                container.classList.add('mobile-frame-mode');
+                btnMobile.classList.add('active');
+                btnDesktop.classList.remove('active');
+            } else {
+                container.classList.remove('mobile-frame-mode');
+                btnDesktop.classList.add('active');
+                btnMobile.classList.remove('active');
+            }
         }
     </script>
 </body>
