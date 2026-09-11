@@ -263,13 +263,13 @@
                     
                     <div class="browser-mockup">
                         <div class="browser-tabs">
-                            <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com', 'preview-aourum')">
+                            <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com')">
                                 <span class="tab-icon gold">●</span> AOURUM
                             </button>
-                            <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app', 'preview-acon')">
+                            <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">
                                 <span class="tab-icon cyan">●</span> ACON
                             </button>
-                            <button class="browser-tab" onclick="switchTab(this, 'https://www.abungasaborqueretumba.com', 'preview-abunga')">
+                            <button class="browser-tab" onclick="switchTab(this, 'https://www.abungasaborqueretumba.com')">
                                 <span class="tab-icon emerald">●</span> Abunga
                             </button>
                         </div>
@@ -290,74 +290,7 @@
                             </div>
                         </div>
                         <div class="browser-body">
-                            <!-- Preview AOURUM -->
-                            <div id="preview-aourum" class="browser-preview-content active">
-                                <div class="preview-glow glow-gold"></div>
-                                <div class="preview-card-inner">
-                                    <div class="preview-header-badge gold-badge">⚡ PLATAFORMA PRINCIPAL</div>
-                                    <h3 class="preview-brand-title">AOURUM</h3>
-                                    <p class="preview-text">
-                                        Plataforma web interactiva desarrollada para ofrecer la máxima performance y experiencia de usuario.
-                                    </p>
-                                    <div class="preview-tags-row">
-                                        <span class="preview-chip">Fullstack</span>
-                                        <span class="preview-chip">React & Node.js</span>
-                                        <span class="preview-chip">UI/UX Interactivo</span>
-                                    </div>
-                                    <div class="preview-actions-row">
-                                        <a href="https://aourum.com" target="_blank" class="preview-btn gold-btn">
-                                            <span>Explorar aourum.com</span>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Preview ACON -->
-                            <div id="preview-acon" class="browser-preview-content">
-                                <div class="preview-glow glow-cyan"></div>
-                                <div class="preview-card-inner">
-                                    <div class="preview-header-badge cyan-badge">⚡ SISTEMA WEB INTEGRADO</div>
-                                    <h3 class="preview-brand-title">ACON</h3>
-                                    <p class="preview-text">
-                                        Sistema web complementario desarrollado en Vercel para potenciar la gestión de datos e integración con AOURUM.
-                                    </p>
-                                    <div class="preview-tags-row">
-                                        <span class="preview-chip">Vercel App</span>
-                                        <span class="preview-chip">Data API</span>
-                                        <span class="preview-chip">Frontend Moderno</span>
-                                    </div>
-                                    <div class="preview-actions-row">
-                                        <a href="https://acon-rho.vercel.app" target="_blank" class="preview-btn cyan-btn">
-                                            <span>Explorar ACON</span>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Preview Abunga -->
-                            <div id="preview-abunga" class="browser-preview-content">
-                                <div class="preview-glow glow-emerald"></div>
-                                <div class="preview-card-inner">
-                                    <div class="preview-header-badge emerald-badge">⚡ MARCA & E-COMMERCE</div>
-                                    <h3 class="preview-brand-title">Abunga Sabor Que Retumba</h3>
-                                    <p class="preview-text">
-                                        Sitio web oficial y concepto de marca propio ideado, diseñado y maquetado de manera independiente.
-                                    </p>
-                                    <div class="preview-tags-row">
-                                        <span class="preview-chip">Branding</span>
-                                        <span class="preview-chip">Web Design</span>
-                                        <span class="preview-chip">E-Commerce</span>
-                                    </div>
-                                    <div class="preview-actions-row">
-                                        <a href="https://www.abungasaborqueretumba.com" target="_blank" class="preview-btn emerald-btn">
-                                            <span>Explorar abungasaborqueretumba.com</span>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <iframe id="browser-iframe" src="https://aourum.com" title="Visualización del Proyecto" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -647,19 +580,14 @@
     </footer>
 
     <script>
-        function switchTab(tabElement, url, previewId) {
+        function switchTab(tabElement, url) {
             const tabs = document.querySelectorAll('.browser-tab');
             tabs.forEach(tab => tab.classList.remove('active'));
             
             tabElement.classList.add('active');
             document.getElementById('browser-url').value = url;
+            document.getElementById('browser-iframe').src = url;
             document.getElementById('browser-external-link').href = url;
-
-            const previewContents = document.querySelectorAll('.browser-preview-content');
-            previewContents.forEach(content => content.classList.remove('active'));
-            
-            const targetContent = document.getElementById(previewId);
-            if (targetContent) targetContent.classList.add('active');
         }
     </script>
 </body>
