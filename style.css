@@ -823,31 +823,72 @@ body {
 }
 
 .open-tab-btn {
-    color: var(--text-muted);
-    display: flex;
+    color: var(--primary-light);
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.4rem;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
     border-radius: 8px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.35);
     transition: all 0.2s ease;
     text-decoration: none;
 }
 
 .open-tab-btn:hover {
-    color: var(--primary-light);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+    border-color: var(--primary-light);
+}
+
+.browser-toolbar-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(24, 28, 40, 0.98), rgba(16, 19, 29, 0.98));
+    border-bottom: 1px solid var(--border);
+    padding: 0.55rem 1.25rem;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.notice-action-btn {
+    background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.notice-action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
 }
 
 .browser-body {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 580px;
     background: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
 .browser-body iframe {
     width: 100%;
-    height: 100%;
+    flex: 1;
     border: none;
 }
 

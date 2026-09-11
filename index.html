@@ -269,7 +269,7 @@
                             <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">
                                 <span class="tab-icon cyan">●</span> ACON
                             </button>
-                            <button class="browser-tab" onclick="switchTab(this, 'https://abungasaborqueretumba.com')">
+                            <button class="browser-tab" onclick="switchTab(this, 'https://www.abungasaborqueretumba.com')">
                                 <span class="tab-icon emerald">●</span> Abunga
                             </button>
                         </div>
@@ -285,15 +285,15 @@
                             </div>
                             <div class="browser-actions">
                                 <a href="https://aourum.com" id="browser-external-link" target="_blank" title="Abrir en pestaña nueva" class="open-tab-btn">
-                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
+                                    <span>Abrir Sitio ↗</span>
                                 </a>
                             </div>
                         </div>
                         <div class="browser-body">
+                            <div class="browser-toolbar-notice">
+                                <span>💡 Si el servidor restringe iFrames por seguridad (X-Frame-Options), abre la versión directa:</span>
+                                <a href="https://aourum.com" id="iframe-notice-link" target="_blank" class="notice-action-btn">Abrir en pestaña nueva ↗</a>
+                            </div>
                             <iframe id="browser-iframe" src="https://aourum.com" title="Visualización del Proyecto" loading="lazy"></iframe>
                         </div>
                     </div>
@@ -592,6 +592,8 @@
             document.getElementById('browser-url').value = url;
             document.getElementById('browser-iframe').src = url;
             document.getElementById('browser-external-link').href = url;
+            const noticeLink = document.getElementById('iframe-notice-link');
+            if (noticeLink) noticeLink.href = url;
         }
     </script>
 </body>
