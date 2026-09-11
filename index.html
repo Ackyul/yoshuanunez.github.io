@@ -30,12 +30,20 @@
     }
     </script>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Yoshua Núñez <span class="alias-badge">Ackyul</span></div>
+    <header class="header">
+        <nav class="container nav-container">
+            <div class="logo">
+                <span class="logo-name">Yoshua Núñez</span>
+                <span class="alias-badge">Ackyul</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -47,207 +55,347 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section id="sobre-mi" class="about-section">
-            <div class="about-hero">
-                <div class="about-text">
-                    <span class="greeting">¡Hola! Soy</span>
-                    <h1 class="main-title">Yoshua Josafat Núñez Huaccoto</h1>
-                    <h2 class="role-subtitle">Desarrollador Web Fullstack <span class="separator">•</span> Estudiante de CS en UCSP</h2>
-                    <p class="subtitle">Creador y desarrollador de <a href="https://aourum.com" target="_blank" class="text-link">AOURUM</a>, <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.</p>
-                    <p class="description">
-                        Apasionado por la tecnología, el diseño web moderno y el desarrollo de software. Actualmente curso Ciencia de la Computación en la Universidad Católica San Pablo (UCSP). En el ámbito competitivo, fui <strong>ex jugador profesional de eSports en OXEN</strong> (VALORANT).
+    <main class="main-content">
+        <section id="sobre-mi" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <div class="greeting-badge">
+                        <span class="pulse-dot"></span>
+                        ¡Hola! Soy
+                    </div>
+                    <h1 class="main-title">Yoshua Josafat <br><span class="gradient-text">Núñez Huaccoto</span></h1>
+                    <h2 class="role-subtitle">
+                        <span class="role-highlight">Desarrollador Web Fullstack</span> 
+                        <span class="separator">•</span> 
+                        <span>Estudiante de CS en UCSP</span>
+                    </h2>
+                    <p class="hero-summary">
+                        Creador y desarrollador de <a href="https://aourum.com" target="_blank" class="text-link">AOURUM</a>, <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.
                     </p>
+                    <p class="description">
+                        Apasionado por la tecnología, el diseño web moderno y la arquitectura de software. Actualmente me formo en Ciencia de la Computación en la Universidad Católica San Pablo (UCSP). En el ámbito competitivo de eSports, fui <strong>ex jugador profesional en OXEN</strong> (VALORANT).
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn primary-btn">Ver Mis Proyectos</a>
+                        <a href="#redes" class="btn secondary-btn">Contactar</a>
+                    </div>
                 </div>
-                <div class="about-image-container">
-                    <img src="foti.png" alt="Yoshua Josafat Núñez Huaccoto (Ackyul) - Foto de Perfil" class="profile-image">
+                <div class="hero-image-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-glow"></div>
+                        <img src="foti.png" alt="Yoshua Josafat Núñez Huaccoto (Ackyul) - Foto de Perfil" class="profile-image">
+                        <div class="profile-badge">
+                            <span class="badge-icon">⚡</span> Ackyul
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="proyectos" class="projects-section">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <p class="projects-intro">
-                Principales desarrollos web y marcas creadas e implementadas:
-            </p>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <span class="project-badge">Plataforma Web</span>
-                        <h3 class="project-title">AOURUM</h3>
-                    </div>
-                    <p class="project-description">
-                        Plataforma web principal diseñada y desarrollada enfocada en la experiencia de usuario, optimización de interfaz y arquitecturas modernas.
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portafolio</span>
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-subtitle">
+                        Desarrollos web principales, arquitecturas frontend/backend y marcas creadas e implementadas:
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">Web App</span>
-                        <span class="tag">Fullstack</span>
-                        <span class="tag">UI/UX</span>
-                    </div>
-                    <a href="https://aourum.com" target="_blank" class="project-link">Visitar aourum.com &rarr;</a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <span class="project-badge">Sistema Web</span>
-                        <h3 class="project-title">ACON</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <span class="project-badge">Plataforma Web</span>
+                            <h3 class="project-title">AOURUM</h3>
+                        </div>
+                        <p class="project-description">
+                            Plataforma web principal diseñada y desarrollada enfocada en una excelente experiencia de usuario, optimización de interfaz y arquitecturas modernas.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Web App</span>
+                            <span class="tag">Fullstack</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <a href="https://aourum.com" target="_blank" class="project-link">
+                            Visitar aourum.com 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
-                    <p class="project-description">
-                        Sistema complementario que trabaja en conjunto con AOURUM, aportando funcionalidades avanzadas y gestión integrada.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Frontend</span>
-                        <span class="tag">Backend</span>
-                        <span class="tag">Integration</span>
-                    </div>
-                    <a href="https://acon-rho.vercel.app" target="_blank" class="project-link">Visitar ACON &rarr;</a>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <span class="project-badge">Marca & E-Commerce</span>
-                        <h3 class="project-title">Abunga Sabor Que Retumba</h3>
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <span class="project-badge">Sistema Web</span>
+                            <h3 class="project-title">ACON</h3>
+                        </div>
+                        <p class="project-description">
+                            Sistema complementario que trabaja en conjunto con AOURUM, aportando funcionalidades avanzadas y gestión integrada.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Backend</span>
+                            <span class="tag">Integration</span>
+                        </div>
+                        <a href="https://acon-rho.vercel.app" target="_blank" class="project-link">
+                            Visitar ACON 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
-                    <p class="project-description">
-                        Marca propia y plataforma web oficial de Abunga Sabor Que Retumba, diseñada y programada desde cero.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Branding</span>
-                        <span class="tag">Web Design</span>
-                        <span class="tag">E-Commerce</span>
-                    </div>
-                    <a href="https://abungasaborqueretumba.com" target="_blank" class="project-link">Visitar abungasaborqueretumba.com &rarr;</a>
-                </div>
-            </div>
 
-            <div class="mockup-header-text">
-                <h3 class="subsection-title">Explora los Proyectos en Vivo</h3>
-                <p class="aourum-desc">Navega interactiva y directamente entre mis proyectos desde este visor web:</p>
-            </div>
-            
-            <div class="browser-mockup">
-                <div class="browser-tabs">
-                    <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com')">AOURUM</button>
-                    <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">ACON</button>
-                    <button class="browser-tab" onclick="switchTab(this, 'https://abungasaborqueretumba.com')">Abunga</button>
-                </div>
-                <div class="browser-header">
-                    <div class="browser-buttons">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <div class="browser-address">
-                        <span class="lock-icon">🔒</span>
-                        <input type="text" id="browser-url" value="https://aourum.com" readonly>
-                    </div>
-                    <div class="browser-actions">
-                        <a href="https://aourum.com" id="browser-external-link" target="_blank" title="Abrir en pestaña nueva" class="open-tab-btn">
-                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <span class="project-badge">Marca & E-Commerce</span>
+                            <h3 class="project-title">Abunga Sabor Que Retumba</h3>
+                        </div>
+                        <p class="project-description">
+                            Marca propia y plataforma web oficial de Abunga Sabor Que Retumba, diseñada, maquetada y programada desde cero.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Web Design</span>
+                            <span class="tag">E-Commerce</span>
+                        </div>
+                        <a href="https://abungasaborqueretumba.com" target="_blank" class="project-link">
+                            Visitar abungasaborqueretumba.com 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
-                <div class="browser-body">
-                    <iframe id="browser-iframe" src="https://aourum.com" title="Visualización del Proyecto" loading="lazy"></iframe>
+
+                <div class="mockup-container">
+                    <div class="mockup-header-text">
+                        <h3 class="subsection-title">Explora los Proyectos en Vivo</h3>
+                        <p class="aourum-desc">Interactúa directamente entre mis proyectos desde este navegador integrado:</p>
+                    </div>
+                    
+                    <div class="browser-mockup">
+                        <div class="browser-tabs">
+                            <button class="browser-tab active" onclick="switchTab(this, 'https://aourum.com')">AOURUM</button>
+                            <button class="browser-tab" onclick="switchTab(this, 'https://acon-rho.vercel.app')">ACON</button>
+                            <button class="browser-tab" onclick="switchTab(this, 'https://abungasaborqueretumba.com')">Abunga</button>
+                        </div>
+                        <div class="browser-header">
+                            <div class="browser-buttons">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="browser-address">
+                                <span class="lock-icon">🔒</span>
+                                <input type="text" id="browser-url" value="https://aourum.com" readonly>
+                            </div>
+                            <div class="browser-actions">
+                                <a href="https://aourum.com" id="browser-external-link" target="_blank" title="Abrir en pestaña nueva" class="open-tab-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="browser-body">
+                            <iframe id="browser-iframe" src="https://aourum.com" title="Visualización del Proyecto" loading="lazy"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="ucsp" class="education-section">
-            <h2 class="section-title">Ciencia de la Computación en la UCSP</h2>
-            <p class="edu-desc">
-                Estudio Ciencia de la Computación en la <strong>Universidad Católica San Pablo (UCSP)</strong>. La carrera sigue las directrices curriculares internacionales de la ACM y la IEEE, creada y dirigida por el <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="text-link">Dr. Ernesto Cuadros Vargas</a> (<a href="http://socios.spc.org.pe/ecuadros/" target="_blank" class="text-link">página académica personal</a>), co-autor de los estándares CS2013 y CC2020.
-            </p>
-            
-            <h3 class="subsection-title">Formación Académica y Cursos Principales:</h3>
-            <ul class="courses-list">
-                <li><strong>Ciencia de la Computación I y II:</strong> Programación orientada a objetos en C++ y estructuras de datos.</li>
-                <li><strong>Estructuras Discretas I y II:</strong> Lógica matemática, teoría de grafos y autómatas.</li>
-                <li><strong>Algoritmos y Estructuras de Datos:</strong> Implementación de árboles, grafos y análisis de complejidad.</li>
-                <li><strong>Desarrollo Basado en Plataformas:</strong> Creación de aplicaciones web fullstack con React y Node.js.</li>
-            </ul>
-        </section>
-
-        <section id="experiencia" class="experience-section">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <h3>Desarrollador Web Fullstack & Creador de Proyectos</h3>
-                    <span class="date">Actualidad</span>
-                    <p>Diseño y desarrollo web fullstack de aplicaciones y sitios interactivos como <a href="https://aourum.com" target="_blank" class="text-link">aourum.com</a>, el sistema <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la plataforma para la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.</p>
+        <!-- Secciones de Educación y Experiencia en Cuadrícula Panorámica de 2 Columnas -->
+        <section class="split-section">
+            <div class="container split-grid">
+                <div id="ucsp" class="education-card">
+                    <div class="card-header">
+                        <span class="section-tag">Formación</span>
+                        <h2 class="section-title">Ciencia de la Computación - UCSP</h2>
+                    </div>
+                    <p class="edu-desc">
+                        Estudio Ciencia de la Computación en la <strong>Universidad Católica San Pablo (UCSP)</strong>. La carrera sigue los estándares globales de la ACM y la IEEE, creada y dirigida por el <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="text-link">Dr. Ernesto Cuadros Vargas</a> (<a href="http://socios.spc.org.pe/ecuadros/" target="_blank" class="text-link">página académica</a>), co-autor de CS2013 y CC2020.
+                    </p>
+                    
+                    <h3 class="subsection-title">Cursos Principales:</h3>
+                    <ul class="courses-list">
+                        <li>
+                            <div class="course-header">
+                                <strong>Ciencia de la Computación I y II</strong>
+                                <span class="course-tag">C++ & POO</span>
+                            </div>
+                            <p>Programación orientada a objetos en C++ y estructuras de datos.</p>
+                        </li>
+                        <li>
+                            <div class="course-header">
+                                <strong>Estructuras Discretas I y II</strong>
+                                <span class="course-tag">Teoría & Grafos</span>
+                            </div>
+                            <p>Lógica matemática, teoría de grafos, relaciones y autómatas.</p>
+                        </li>
+                        <li>
+                            <div class="course-header">
+                                <strong>Algoritmos y Estructuras de Datos</strong>
+                                <span class="course-tag">Algoritmos</span>
+                            </div>
+                            <p>Implementación de árboles, grafos y análisis de complejidad.</p>
+                        </li>
+                        <li>
+                            <div class="course-header">
+                                <strong>Desarrollo Basado en Plataformas</strong>
+                                <span class="course-tag">Fullstack</span>
+                            </div>
+                            <p>Creación de aplicaciones web fullstack con React y Node.js.</p>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="experience-item">
-                    <h3>Estudiante de Ciencia de la Computación (UCSP)</h3>
-                    <span class="date">Actualidad</span>
-                    <p>Desarrollo de competencias en fundamentos teóricos y prácticos de computación, algoritmos avanzados, estructuras de datos y arquitectura de software.</p>
-                </div>
+                <div id="experiencia" class="experience-card">
+                    <div class="card-header">
+                        <span class="section-tag">Trayectoria</span>
+                        <h2 class="section-title">Experiencia</h2>
+                    </div>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <div class="exp-badge">Actualidad</div>
+                            <h3>Desarrollador Web Fullstack & Creador</h3>
+                            <p>Diseño y desarrollo web de aplicaciones interactivas como <a href="https://aourum.com" target="_blank" class="text-link">aourum.com</a>, el sistema <a href="https://acon-rho.vercel.app" target="_blank" class="text-link">ACON</a> y la plataforma para la marca <a href="https://abungasaborqueretumba.com" target="_blank" class="text-link">Abunga Sabor Que Retumba</a>.</p>
+                        </div>
 
-                <div class="experience-item">
-                    <h3>Ex Jugador Profesional de eSports (OXEN)</h3>
-                    <span class="date">2023 - 2024</span>
-                    <p>Ex jugador profesional de VALORANT en la organización <strong>OXEN</strong>. Desempeñé el rol de IGL (In-Game Leader) y Controlador principal (Main Smokes), participando en competencias competitivas y liderando estrategias de equipo.</p>
+                        <div class="experience-item">
+                            <div class="exp-badge">Actualidad</div>
+                            <h3>Estudiante de Ciencia de la Computación (UCSP)</h3>
+                            <p>Formación académica avanzada en ciencias de la computación, estructuras de datos, algoritmos complejos y desarrollo de software estructurado.</p>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="exp-badge history">2023 - 2024</div>
+                            <h3>Ex Jugador Profesional de eSports (OXEN)</h3>
+                            <p>Ex jugador profesional de VALORANT en la organización <strong>OXEN</strong>. Desempeñé el rol de IGL (In-Game Leader) y Controlador principal (Main Smokes), dirigiendo estrategias de equipo en competencia.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="amigos" class="friends-section">
-            <h2 class="section-title">Páginas de mis Amigos</h2>
-            <p class="friends-desc">Sitios web de amigos y compañeros de estudio:</p>
-            <div class="friends-links">
-                <a href="https://jairchirinos-ucsp.github.io" target="_blank" class="friend-link-card">Jair Chirinos &rarr;</a>
-                <a href="https://yulvillena-source.github.io/Yul_Villena/" target="_blank" class="friend-link-card">Yul Villena &rarr;</a>
-                <a href="https://jsalavaldez.github.io" target="_blank" class="friend-link-card">Jose Miguel &rarr;</a>
-                <a href="https://benjaminamv11.github.io/benjaminanv11.github.io/" target="_blank" class="friend-link-card">Benjamin Mamani &rarr;</a>
-                <a href="https://bryanalencastre.github.io/Bryan-Alencastre/" target="_blank" class="friend-link-card">Bryan Alencastre &rarr;</a>
-                <a href="https://angelfabianramosmunoz.github.io" target="_blank" class="friend-link-card">Angel Ramos &rarr;</a>
-                <a href="https://diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/" target="_blank" class="friend-link-card">Diego Aragón &rarr;</a>
-                <a href="https://kings-67.github.io/Learnsy/" target="_blank" class="friend-link-card">Nicolas Olarte &rarr;</a>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Comunidad</span>
+                    <h2 class="section-title">Páginas de mis Amigos</h2>
+                    <p class="section-subtitle">Conecta con los sitios web y portafolios de mis compañeros de estudio:</p>
+                </div>
+                <div class="friends-grid">
+                    <a href="https://jairchirinos-ucsp.github.io" target="_blank" class="friend-card">
+                        <div class="friend-avatar">JC</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Jair Chirinos</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://yulvillena-source.github.io/Yul_Villena/" target="_blank" class="friend-card">
+                        <div class="friend-avatar">YV</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Yul Villena</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://jsalavaldez.github.io" target="_blank" class="friend-card">
+                        <div class="friend-avatar">JM</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Jose Miguel</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://benjaminamv11.github.io/benjaminanv11.github.io/" target="_blank" class="friend-card">
+                        <div class="friend-avatar">BM</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Benjamin Mamani</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://bryanalencastre.github.io/Bryan-Alencastre/" target="_blank" class="friend-card">
+                        <div class="friend-avatar">BA</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Bryan Alencastre</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://angelfabianramosmunoz.github.io" target="_blank" class="friend-card">
+                        <div class="friend-avatar">AR</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Angel Ramos</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://diegoalonsoaragonmamani.github.io/DiegoAlonsoAragonMamani/" target="_blank" class="friend-card">
+                        <div class="friend-avatar">DA</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Diego Aragón</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                    <a href="https://kings-67.github.io/Learnsy/" target="_blank" class="friend-card">
+                        <div class="friend-avatar">NO</div>
+                        <div class="friend-info">
+                            <span class="friend-name">Nicolas Olarte</span>
+                            <span class="friend-link-icon">&rarr;</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
         <section id="redes" class="socials-section">
-            <h2 class="section-title">Contacto y Enlaces</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/yoshua-nunez-ackyul/" target="_blank" class="social-btn linkedin">LinkedIn</a>
-                <a href="https://github.com/Ackyul" target="_blank" class="social-btn github">GitHub</a>
-                <a href="https://aourum.com" target="_blank" class="social-btn aourum-btn">AOURUM</a>
-                <a href="https://abungasaborqueretumba.com" target="_blank" class="social-btn abunga-btn">Abunga</a>
-                <a href="https://x.com/Ackyul" target="_blank" class="social-btn twitter">X (Twitter)</a>
-                <a href="https://www.instagram.com/yn.ackyul/" target="_blank" class="social-btn instagram">Instagram</a>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Conectemos</span>
+                    <h2 class="section-title">Contacto y Enlaces</h2>
+                </div>
+                <div class="social-grid">
+                    <a href="https://www.linkedin.com/in/yoshua-nunez-ackyul/" target="_blank" class="social-card linkedin">
+                        <div class="social-icon">in</div>
+                        <div class="social-title">LinkedIn</div>
+                    </a>
+                    <a href="https://github.com/Ackyul" target="_blank" class="social-card github">
+                        <div class="social-icon">GH</div>
+                        <div class="social-title">GitHub</div>
+                    </a>
+                    <a href="https://aourum.com" target="_blank" class="social-card aourum">
+                        <div class="social-icon">AO</div>
+                        <div class="social-title">aourum.com</div>
+                    </a>
+                    <a href="https://abungasaborqueretumba.com" target="_blank" class="social-card abunga">
+                        <div class="social-icon">AB</div>
+                        <div class="social-title">Abunga</div>
+                    </a>
+                    <a href="https://x.com/Ackyul" target="_blank" class="social-card twitter">
+                        <div class="social-icon">X</div>
+                        <div class="social-title">X (Twitter)</div>
+                    </a>
+                    <a href="https://www.instagram.com/yn.ackyul/" target="_blank" class="social-card instagram">
+                        <div class="social-icon">IG</div>
+                        <div class="social-title">Instagram</div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Yoshua Josafat Núñez Huaccoto (Ackyul). Todos los derechos reservados.</p>
         </div>
     </footer>
+
     <script>
         function switchTab(tabElement, url) {
-            // Quitar clase activa a todas las pestañas
             const tabs = document.querySelectorAll('.browser-tab');
             tabs.forEach(tab => tab.classList.remove('active'));
             
-            // Añadir clase activa a la pestaña clickeada
             tabElement.classList.add('active');
-            
-            // Actualizar valor de la barra de URL
             document.getElementById('browser-url').value = url;
-            
-            // Cambiar fuente del iframe
             document.getElementById('browser-iframe').src = url;
-            
-            // Actualizar enlace externo
             document.getElementById('browser-external-link').href = url;
         }
     </script>
 </body>
 </html>
+
 
