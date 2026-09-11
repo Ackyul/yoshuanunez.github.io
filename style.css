@@ -37,10 +37,10 @@ body {
 }
 
 .container {
-    max-width: 1280px;
-    width: 100%;
+    max-width: 1650px;
+    width: 95%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .text-link {
@@ -770,9 +770,9 @@ body {
 }
 
 /* =========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (SOLO PARA PANTALLAS PEQUEÑAS)
    ========================================= */
-@media (max-width: 1024px) {
+@media (max-width: 850px) {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
